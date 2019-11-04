@@ -3,6 +3,7 @@ package in.chandanpal.pocjwt.model;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,7 +12,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
-import org.hibernate.validator.constraints.UniqueElements;
 
 @Entity
 public class User {
@@ -24,7 +24,7 @@ public class User {
 	private String lastName;
 	private int active;
 	
-	@UniqueElements
+	@Column(unique = true, nullable = false)
 	private String email;
 	
 	private String password;

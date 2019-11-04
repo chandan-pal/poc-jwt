@@ -1,5 +1,7 @@
 package in.chandanpal.pocjwt.service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +16,9 @@ public class UserService {
     
     public User findUserByEmail(String email) {
         return userRepository.findByEmail(email);
+    }
+    
+    public Optional<User> findUserById(long userId) {
+        return userRepository.findById(userId);
     }
 }
