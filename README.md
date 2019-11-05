@@ -25,3 +25,13 @@
 </p>
 
 
+## Concept ##
+This is a Spring application which utilizes Spring Security to block all incoming requests without proper authentication and authorization.
+
+It uses jdbc authentication to validate users from MySQL database using JPI - Java Persistence API.
+
+To implement JWT-
+  1. send a 'Json Web Token' with first request to authentication page '/authenticate' in this project.
+  2. Apply a filter before every subsequent requests to validate the JWT (with the help of Spring Security).
+
+
